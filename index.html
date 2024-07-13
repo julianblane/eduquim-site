@@ -16,25 +16,27 @@
 
             background: linear-gradient(rgb(134, 182, 244), rgb(82, 154, 255));
         }
-        
+
         .logo {
-            width: 256px;
-            height: 256px;
+            width: auto;
             margin-bottom: 20px;
         }
 
-        .card-logo {
-            /* width: 200px;
-            height: 200px; */
-            background-size: cover;
-            background-position: center;
-            border-radius: 16px;
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
-        
-        .description {
-            text-align: center;
-            font-size: 18px;
-            color: #333;
+        @media screen and (min-width: 1024px) {
+            .content {
+            flex-direction: row; /* Change to row for desktop */
+            gap: 32px; /* Add gap between elements */
+            }
+
+            .content div {
+            flex: 1; /* Make each div take up equal space */
+            }
         }
 
         .card {
@@ -48,45 +50,87 @@
             background-color: white;
             border-radius: 32px;
         }
+        .card-logo {
+            width: auto;
+            object-fit: cover;
+            border-radius: 16px;
+        }
 
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-us p {
+            text-align: center;
+            font-size: large;
+        }
+        .members {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
         .linkedin {
             display: flex;
             flex-direction: row;
+            text-decoration: none;
+            gap: 6px;
+            color: #0077B5;
+            font-weight: bold;
+        }
+
+
+        .projects p {
+            text-align: center;
+            font-size: large;
         }
     </style>
 </head>
 <body>
-    <img class="logo" src="images/logos/science-joy.png"></div>
-    <h1>Nuestro equipo</h1>
-    <div class="horizontal-card">
-    <div class="card">
-        <div class="card-content">
-            <img height="256px" class="card-logo" src="images/team/eugenia.webp" alt="Foto de Eugenia">
-            <h2>Eugenia Inchauspe</h2>
-            <p>Química - Pedagogía</p>
-            <a class="linkedin" href="https://www.linkedin.com/in/maria-eugenia-inchauspe/">
-                <img height="16px" class="card-logo" src="images/logos/ln-bug.png" alt="Project Image">
-                maria-eugenia-inchauspe
-            </a>
+    <img height="256px" class="logo" src="images/logos/science-joy.png"></div>
+    <div class="content">
+        <div class="section about-us">
+            <h1>Nosotros</h1>
+            <div class="members">
+                <div class="card">
+                    <div class="card-content">
+                        <img height="192px" class="card-logo" src="images/team/eugenia.webp" alt="Foto de Eugenia">
+                        <h2>Eugenia Inchauspe</h2>
+                        <p>Química - Pedagogía</p>
+                        <a class="linkedin" href="https://www.linkedin.com/in/maria-eugenia-inchauspe/">
+                            <img height="16px" src="images/logos/ln-bug.png" alt="linkedin logo">
+                            maria-eugenia-inchauspe
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <img height="192px" class="card-logo" src="images/team/julian.webp" alt="Foto de Julian">
+                        <h2>Julian Benegas Lane</h2>
+                        <p>Software - Arte</p>
+                        <a class="linkedin" href="https://www.linkedin.com/in/julianblane/">
+                            <img height="16px" src="images/logos/ln-bug.png" alt="linkedin logo">
+                            <span>julianblane</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <p>Somos una empresa que busca Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc at ultricies ultricies, nisl nunc aliquet nunc, id lacinia nunc nunc vitae nunc. Sed at nunc auctor, aliquet nunc a, aliquet nunc. Sed auctor, nunc at ultricies ultricies, nisl nunc aliquet nunc, id lacinia nunc nunc vitae nunc. Sed at nunc auctor, aliquet nunc a, aliquet nunc.</p>
+            </div>
         </div>
-        <div class="card-content">
-            <img height="256px" class="card-logo" src="images/team/julian.webp" alt="Foto de Julian">
-            <h2>Julian Benegas Lane</h2>
-            <p>Software - Arte</p>
-            <a class="linkedin" href="https://www.linkedin.com/in/maria-eugenia-inchauspe/">
-                <img height="16px" class="card-logo" src="images/logos/ln-bug.png" alt="Project Image">
-                maria-eugenia-inchauspe
-            </a>
-        </div>
-    </div>
-        <!-- equipo -->
-    </div>
-    <h1>Nuestros Proyectos</h1>
-    <div class="card">
-        <img height="256px" class="card-logo" src="images/logos/odisea-elemental.png" alt="Project Image">
-        <div class="card-content">
-            <h2>Odisea EleMental</h2>
-            <p>Aprende quimica, jugando!</p>
+        <div class="section projects">
+            <h1>Nuestros Proyectos</h1>
+            <div class="card">
+                <img height="256px" class="card-logo" src="images/logos/odisea-elemental.png" alt="Project Image">
+                <div class="card-content">
+                    <h2>Odisea EleMental</h2>
+                    <p>Aprende quimica, jugando!</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>

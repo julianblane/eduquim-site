@@ -4,6 +4,7 @@
     <title>Odisea EleMental</title>
     <style>
         
+
         body {
             display: flex;
             flex-direction: column;
@@ -11,15 +12,22 @@
             justify-content: center;
             margin: 0;
 
+            font-size: xx-large;
+
             font-family: Arial, sans-serif;
             color: rgb(62, 62, 62);
 
             background: linear-gradient(rgb(134, 182, 244), rgb(82, 154, 255));
         }
 
-        .logo {
-            width: auto;
-            margin-bottom: 20px;
+        @media screen and (min-width: 1024px) {
+            body {
+                font-size: medium;
+            }
+        }
+
+        .team-logo {
+            height: 16em;
         }
 
         .content {
@@ -31,7 +39,7 @@
         @media screen and (min-width: 1024px) {
             .content {
             flex-direction: row; /* Change to row for desktop */
-            gap: 32px; /* Add gap between elements */
+            gap: 1vw; /* Add gap between elements */
             }
 
             .content div {
@@ -44,16 +52,33 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            margin: 20px;
-            padding: 20px;
-            gap: 64px;
+            
+            margin: .5em;
+            padding: 1em;
+            gap: 2em;
+            
             background-color: white;
-            border-radius: 32px;
+            border-radius: 1em;
+        }
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         .card-logo {
             width: auto;
             object-fit: cover;
-            border-radius: 16px;
+        }
+
+        .card-member{
+            max-width: 12em;
+        }
+        .card-header {
+            width: 100%;
+            border-radius: .5em;
+            height: auto;
+            object-fit: cover;
         }
 
         .section {
@@ -65,7 +90,6 @@
 
         .about-us p {
             text-align: center;
-            font-size: large;
         }
         .members {
             display: flex;
@@ -77,42 +101,42 @@
             display: flex;
             flex-direction: row;
             text-decoration: none;
-            gap: 6px;
+            align-items: center;
+            gap: .5em;
             color: #0077B5;
             font-weight: bold;
+            font-size: .75em;
+        }
+        .linkedin img {
+            height: 1em;
         }
 
-
-        .projects p {
-            text-align: center;
-            font-size: large;
-        }
     </style>
 </head>
 <body>
-    <img height="256px" class="logo" src="images/logos/science-joy.png"></div>
+    <img class="team-logo" src="images/logos/science-joy.png"></div>
     <div class="content">
         <div class="section about-us">
             <h1>Nosotros</h1>
             <div class="members">
-                <div class="card">
+                <div class="card card-member">
                     <div class="card-content">
-                        <img height="192px" class="card-logo" src="images/team/eugenia.webp" alt="Foto de Eugenia">
-                        <h2>Eugenia Inchauspe</h2>
+                        <img class="card-header" src="images/team/eugenia.webp" alt="Foto de Eugenia">
+                        <h3>Eugenia Inchauspe</h3>
                         <p>Química - Pedagogía</p>
                         <a class="linkedin" href="https://www.linkedin.com/in/maria-eugenia-inchauspe/">
-                            <img height="16px" src="images/logos/ln-bug.png" alt="linkedin logo">
+                            <img src="images/logos/ln-bug.png" alt="ln">
                             maria-eugenia-inchauspe
                         </a>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card card-member">
                     <div class="card-content">
-                        <img height="192px" class="card-logo" src="images/team/julian.webp" alt="Foto de Julian">
-                        <h2>Julian Benegas Lane</h2>
+                        <img class="card-header" src="images/team/julian.webp" alt="Foto de Julian">
+                        <h3>Julian Benegas Lane</h3>
                         <p>Software - Arte</p>
                         <a class="linkedin" href="https://www.linkedin.com/in/julianblane/">
-                            <img height="16px" src="images/logos/ln-bug.png" alt="linkedin logo">
+                            <img src="images/logos/ln-bug.png" alt="ln">
                             <span>julianblane</span>
                         </a>
                     </div>

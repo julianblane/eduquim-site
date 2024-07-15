@@ -17,7 +17,8 @@
             font-family: Arial, sans-serif;
             color: rgb(62, 62, 62);
 
-            background: linear-gradient(rgb(134, 182, 244), rgb(82, 154, 255));
+            background: linear-gradient(#cfe9fc, #3da7f5);
+            min-height: 100vh;
         }
 
         @media screen and (min-width: 1024px) {
@@ -73,6 +74,9 @@
 
         .card-member{
             max-width: 12em;
+        }
+        .card-member p, .card-project p {
+            margin-top: 0;
         }
         .card-header {
             width: 100%;
@@ -148,11 +152,16 @@
         </div>
         <div class="section projects">
             <h1>Nuestros Proyectos</h1>
-            <div class="card">
+            <div class="card card-project">
                 <img height="256px" class="card-logo" src="images/logos/odisea-elemental.png" alt="Project Image">
                 <div class="card-content">
                     <h2>Odisea EleMental</h2>
                     <p>Aprende quimica, jugando!</p>
+                    <div style="display: flex; justify-content: center;">
+                        <img width="42%" src="images/external/google-play.png" alt="google play">
+                        <img width="42%" src="images/external/app-store.svg" alt="app store">
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
